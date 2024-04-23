@@ -1,0 +1,9 @@
+services:
+  - name: jenkins
+    dockerfile: Dockerfile
+    plan: starter
+    env:
+      - key: JAVA_OPTS
+        value: "-Djenkins.install.runSetupWizard=false" # Отключение мастера установки
+    ports:
+      - 8080 # Порт Jenkins
